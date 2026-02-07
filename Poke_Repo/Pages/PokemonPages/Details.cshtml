@@ -1,0 +1,18 @@
+﻿@page
+@model Poke_Repo.Pages.PokemonPages.DetailsModel
+<h1>@Model.Pokemon?.Name</h1>
+
+@if(Model.Pokemon == null)
+{
+    <p>Kunde inte hämta Pokemon.</p>
+}
+else
+{
+    <ul>
+        <li>ID: @Model.Pokemon.Id</li>
+        <li>Height: @Model.Pokemon.Height</li>
+        <li>Weight: @Model.Pokemon.Weight</li>
+    </ul>
+}
+
+<a asp-page="Index">⬅ Tillbaka</a>

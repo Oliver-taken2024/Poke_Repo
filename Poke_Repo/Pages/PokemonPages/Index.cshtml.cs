@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Poke_Repo.Model;
 
-namespace Poke_Repo.Pages.Pokemon
+namespace Poke_Repo.Pages.PokemonPages
 {
     public class IndexModel : PageModel
     {

@@ -9,7 +9,7 @@ namespace Poke_Repo.Data
         {
 
         }
-      public DbSet<PokemonModel> Pokemons { get; set; }
+      public DbSet<PokemonModel> Pokemons => Set<PokemonModel>();
     }
 
     

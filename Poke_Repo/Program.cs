@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Poke_Repo.Data;
+using Poke_Repo.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,8 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+//lägg in http service
+builder.Services.AddHttpClient<PokeApiServices>();
 
 var app = builder.Build();
 

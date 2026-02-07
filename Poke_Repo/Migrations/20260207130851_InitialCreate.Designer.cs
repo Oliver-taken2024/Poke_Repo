@@ -11,8 +11,8 @@ using Poke_Repo.Data;
 namespace Poke_Repo.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260203091551_Init")]
-    partial class Init
+    [Migration("20260207130851_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,6 +38,9 @@ namespace Poke_Repo.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PokeApiId")
+                        .HasColumnType("int");
 
                     b.Property<int>("Weight")
                         .HasColumnType("int");
